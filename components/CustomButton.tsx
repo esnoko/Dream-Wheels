@@ -4,11 +4,11 @@ import React from 'react'
 import Image from 'next/image'
 import { ICustomButton } from '@/types';
 
-const CustomButton = ({title,containerStyles,handleClick}: ICustomButton) => {
+const CustomButton = ({title,containerStyles,handleClick, btnType}: ICustomButton) => {
   return (
     <button
        disabled= {false}
-       type={'button'}
+       type={btnType || "button"}
        className={`custom-btn ${containerStyles}`}
        onClick={handleClick}
        >
