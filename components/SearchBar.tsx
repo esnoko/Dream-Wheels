@@ -1,8 +1,14 @@
 import React from 'react'
+import SearchManufacturer from './SearchManufacturer'
 
 function SearchBar() {
+  const handleSearch = () =>{}
   return (
-    <div>SearchBar</div>
+    <form className='searchbar' onSubmit={handleSearch}>
+      <div className='searchbar_item'>
+        <SearchManufacturer />
+      </div>
+    </form>
   )
 }
 
