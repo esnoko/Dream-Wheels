@@ -7,7 +7,7 @@ export async function fetchCars() {
   
     // Set the required headers for the API request
     const response = await fetch(
-      `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars`,
+      `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=Corolla`,
       {
         headers: headers,
       }
