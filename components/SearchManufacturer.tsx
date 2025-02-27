@@ -1,9 +1,28 @@
-import React from 'react'
+"use client";
+import Image from "next/image";
+import { SearchManuFacturerProps } from "@/types";
+import { Combobox, Transition } from "@headlessui/react";
 
-function SearchManufacturer() {
+const SearchManufacturer = ({
+  manufacturer,
+  setManuFacturer,
+}: SearchManuFacturerProps) => {
   return (
-    <div>SearchManufacturer</div>
-  )
-}
+    <div className="search-manufacturer">
+      <Combobox>
+        <div className="relative w-full">
+          <Combobox.Button className="absolute top-[14px]">
+            <Image
+              src="/car-logo.svg"
+              width={20}
+              height={20}
+              alt="Car Logo"
+            />
+          </Combobox.Button>
+        </div>
+      </Combobox>
+    </div>
+  );
+};
 
-export default SearchManufacturer
+export default SearchManufacturer;
