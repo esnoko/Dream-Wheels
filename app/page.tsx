@@ -4,13 +4,7 @@ import { fuels, yearsOfProduction } from "@/constants";
 import { Hero, CarCard, SearchBar, CustomFilter} from "@/components";
 
 export default async function Home({ searchParams }: HomeProps) {
-  const allCars = await fetchCars({
-    manufacturer: searchParams.manufacturer || "",
-    year: searchParams.year || 2022,
-    fuel: searchParams.fuel || "",
-    limit: searchParams.limit || 10,
-    model: searchParams.model || "",
-  });
+  const allCars = await fetchCars();
 
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
 

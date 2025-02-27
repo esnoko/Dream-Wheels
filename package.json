@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
+    "@types/node-fetch": "^2.6.12",
     "next": "15.1.5",
+    "node-fetch": "^3.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
